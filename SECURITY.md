@@ -1,11 +1,9 @@
-# Security Policy & Invariant Reality Gate Audit
+# Security and Limitations
 
-## Supported Standards
-- NIST FIPS 203 (ML-KEM)
-- NIST FIPS 204 (ML-DSA)
-- NIST FIPS 205 (SLH-DSA)
-- Conway Automaton B3/S23 Deterministic Invariant
+This repository currently implements only bounded offline accounting invariants. It does **not** implement, test or certify NIST FIPS 203, FIPS 204, FIPS 205, cryptographic signing, cross-chain finality, custody, escrow, or settlement authorization.
 
-## Reporting a Vulnerability
-Email security invariants to: security@qmoosa.network
-All valid invariant breaches are eligible for Bug Bounty rewards.
+Known gaps: replay protection is only within one input batch, no durable transaction journal, no concurrency control, no authenticated caller, no cross-ledger reconciliation, no independent audit. Never process real funds with this code.
+
+Report suspected vulnerabilities through GitHub's private vulnerability reporting feature if enabled, or open a minimal issue without including secrets or exploit data. No bug-bounty promise or private contact address is asserted here.
+
+**Security acceptance: NOT APPROVED. Deployment readiness: NOT APPROVED.**
